@@ -1,26 +1,29 @@
-const gulp = require("gulp");
+const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const sourcemaps = require('gulp-sourcemaps');
-const uglify = require('gulp-uglify');
+const uglify = require('gulp-uglify').default;
 
 function comprimeJavaScript() {
-    return gulp.src('./source/scripts/*.js')
+    return gulp
+        .src('./source/scripts/*.js')
         .pipe(uglify())
-        .pipe(gulp.dest('./build/scripts'))
+        .pipe(gulp.dest('./build/scripts'));
 }
 
 function compilaSass() {
-    return gulp.src('./source/styles/main.scss')
+    return gulp
+        .src('./source/styles/main.scss')
         .pipe(sourcemaps.init())
-        .pipe(sass({
-            outputStyle: 'compressed'
-        }))
+        .pipe(
+            sass({
+                outputStyle: 'compressed',
+            }).on('error', sass.logError)
+        )
         .pipe(sourcemaps.write('./maps'))
         .pipe(gulp.dest('./build/styles'));
 }
 
-
-exports.default = function() {
-    gulp.watch('./source/styles/*.scss', {ignoreInitial: false }, gulp.series(compilaSass))
-    gulp.watch('./source/scripts/*.js', {ignoreInitial: false }, gulp.series(comprimeJavaScript))
-}
+exports.default = function () {
+    gulp.watch('./source/styles/*.scss', { ignoreInitial: false }, compilaSass);
+    gulp.watch('./source/scripts/*.js', { ignoreInitial: false }, comprimeJavaScript);
+};
