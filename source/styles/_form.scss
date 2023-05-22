@@ -33,6 +33,12 @@
                 font-size: 16px;
                 font-weight: 400;
                 cursor: pointer;
+
+                &--activated {
+                    color: variables.$secudaryColor;
+                    border-color: variables.$detailsColor;
+                    background-color: variables.$detailsColor;
+                }
             }
         }
 
@@ -68,16 +74,22 @@
         }
 
         &__send {
-            background-color: variables.$detailsColor;
+            background-color: variables.$linkColor;
             font-size: 16px;
             font-weight: 400;
             padding: 12px 28px;
-            color:  variables.$secudaryColor;
-            border: none;
+            color: variables.$buttonColor;
+            border: 2px solid variables.$buttonColor;
             border-radius: 16px;
             display: inline-flex;
             align-items: center;
             cursor: pointer;
+
+            &--activated {
+                color: variables.$secudaryColor;
+                border-color: variables.$detailsColor;
+                background-color: variables.$detailsColor;
+            }
 
             &__icon {
                 vertical-align: middle;
