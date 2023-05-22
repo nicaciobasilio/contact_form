@@ -8,7 +8,7 @@
         font-size: 48px;
         font-weight: 700;
         color: variables.$secudaryColor;
-        margin-bottom: 90px;
+        margin-bottom: 80px;
 
         &--color {
             color: variables.$detailsColor;
@@ -45,7 +45,7 @@
 
     &__social {
         display: inline-flex;
-        margin-top: 4rem;
+        margin-top: 1rem;
         padding: 24px;
 
         &__item {
