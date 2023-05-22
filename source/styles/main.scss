@@ -1,0 +1,29 @@
+@use './variables';
+@use './container';
+@use './content';
+@use './form';
+
+@font-face {
+    font-family: Poppins;
+    src: url(../../assets/fonts/Poppins-Medium.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(../../assets/fonts/Poppins-Bold.ttf);
+    font-weight: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Avenir, sans-serif;
+    list-style: none;
+}
+
+body {
+    background-color: variables.$backGroundColor;
+    overflow-y: hidden;
+}

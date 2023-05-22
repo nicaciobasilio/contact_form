@@ -1,0 +1,77 @@
+@use './variables';
+
+.content {
+    width: 700px;
+    margin: 48px;
+
+    &__title {
+        font-size: 48px;
+        font-weight: 700;
+        color: variables.$secudaryColor;
+        margin-bottom: 90px;
+
+        &--color {
+            color: variables.$detailsColor;
+        }
+    }
+
+    &__list {
+        &__item {
+            list-style: none;
+            padding: 24px;
+            border: 1px solid variables.$backGroundColor;
+
+            &:hover {
+                background-color: variables.$linkColor;
+                border-radius: 16px;
+                border: 1px solid variables.$detailsColor;
+            }
+
+            &__icon {
+                margin-right: 16px;
+                vertical-align: middle;
+            }
+
+            &__link {
+                text-decoration: none;
+                font-size: 20px;
+                font-weight: 400;
+                color: variables.$secudaryColor;
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    &__social {
+        display: inline-flex;
+        margin-top: 4rem;
+        padding: 24px;
+
+        &__item {
+            border-radius: 100%;
+            &--center {
+                margin: 0 36px 0 36px;
+            }
+
+            &__link {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 50px; 
+                height: 50px; 
+                border-radius: 50%; 
+                background-color: variables.$backGroundColor;
+                &:hover {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 50px; 
+                    height: 50px; 
+                    border-radius: 50%; 
+                    background-color: variables.$detailsColor;
+                }
+            }
+        }
+    }
+}

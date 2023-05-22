@@ -1,0 +1,88 @@
+@use './variables';
+
+.form {
+    background-color: variables.$secudaryColor;
+    width: 700px;
+    height: 600px;
+    margin-left: 162px;
+    border-radius: 24px;
+
+    &__content {
+        margin: 48px;
+
+
+        &__title {
+            color: variables.$fontColor;
+            font-weight: 400;
+            font-size: 20px;
+            margin-bottom: 24px;
+            display: block;
+        }
+
+        &__buttons {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 6px;
+            margin-bottom: 64px;
+            
+            &__button {
+                padding: 16px;
+                border-radius: 8px;
+                color: variables.$buttonColor;
+                border: 2px solid variables.$buttonColor;
+                font-size: 16px;
+                font-weight: 400;
+                cursor: pointer;
+            }
+        }
+
+        &__inputs {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 100px;
+
+            &__input {
+                border: none;
+                outline: none;
+                color: variables.$buttonColor;
+                background-color: variables.$secudaryColor;
+                border-bottom: 3px solid variables.$buttonColor;
+                padding: 4px 0;
+                font-size: 16px;
+                font-weight: 400;
+
+                &:focus {
+                    border: none;
+                    border-bottom: 3px solid variables.$detailsColor;
+                    color: variables.$fontColor;
+
+                    &::placeholder {
+                        color: variables.$fontColor;
+                    }
+                }
+
+                &--center {
+                    margin: 36px 0 36px 0;
+                }
+            }
+        }
+
+        &__send {
+            background-color: variables.$detailsColor;
+            font-size: 16px;
+            font-weight: 400;
+            padding: 12px 28px;
+            color:  variables.$secudaryColor;
+            border: none;
+            border-radius: 16px;
+            display: inline-flex;
+            align-items: center;
+            cursor: pointer;
+
+            &__icon {
+                vertical-align: middle;
+                margin-right: 8px;
+            }
+        }
+    }
+}
