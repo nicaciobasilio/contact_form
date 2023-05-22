@@ -4,7 +4,7 @@
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
-    "build": "gulp",
+    "gulp": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -12,11 +12,12 @@
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-imagemin": "^8.0.0",
-    "gulp-sass": "^5.1.0",
-    "gulp-sourcemaps": "^3.0.0",
-    "gulp-uglify": "^3.0.2"
+    "uglify": "^0.1.5"
   },
   "dependencies": {
-    "sass": "^1.43.4"
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.62.1"
   }
 }
